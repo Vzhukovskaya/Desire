@@ -91,3 +91,40 @@ $(function () {
   });
 
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact__form");
+  const nameInput = document.querySelector(".contact__form-input[type='text']");
+  const emailInput = document.querySelector(".contact__form-input[type='email']");
+  const messageTextArea = document.querySelector(".contact__form-area");
+
+  function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  form.addEventListener("submit", function (event) {
+    let hasErrors = false;
+
+    if (!nameInput.value.trim()) {
+      alert("Please enter your name.");
+      hasErrors = true;
+    }
+
+    if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+      alert("Please enter a valid email address.");
+      hasErrors = true;
+    }
+
+    if (!messageTextArea.value.trim()) {
+      alert("Please enter your message.");
+      hasErrors = true;
+    }
+
+    if (hasErrors) {
+      event.preventDefault();
+    }
+  });
+});
+
