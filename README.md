@@ -1,6 +1,6 @@
 # DesireFurniture
 
-DesireFurniture is a modern and stylish website template designed for furniture stores and interior design companies. 
+Desire is a modern and stylish website template designed for furniture stores and interior design companies. 
 This template uses advanced web technologies and libraries to create a responsive and visually appealing online presence.
 
 ## Demo
