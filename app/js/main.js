@@ -12,7 +12,7 @@ $(function () {
     $('.menu').toggleClass('menu--open');
   });
 
-  if($(window).width() < 651){
+  if ($(window).width() < 651) {
     $('.works-path__item--measuring').appendTo($('.works-path__items-box'));
   }
 
@@ -80,9 +80,9 @@ $(function () {
 
   });
 
-  
 
- 
+
+
 
   var mixer = mixitup('.gallery__inner', {
     load: {
